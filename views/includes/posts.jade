@@ -1,0 +1,15 @@
+- posts.forEach(function(post, index){
+  - if(index % 3 == 0)
+    | <div class="row">
+  .span4
+    h2
+      a(herf="/u/#{post.user}") #{post.user}
+      | 说
+    p
+       small #{post.time}
+    p #{post.post}
+  - if(index % 3 == 2)
+    | </div><!-- end row -->
+- })
+- if(posts.length % 3 != 0)
+  | </div><!-- end row -->

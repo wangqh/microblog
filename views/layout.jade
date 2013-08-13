@@ -1,0 +1,19 @@
+doctype 5
+html(lang='en')
+  include includes/head
+  body
+    include includes/navbar
+    #container.container
+      - if (success)
+        .alert.alert-success
+          a.close(data-dismiss="alert", href="#") &times;
+          | #{success}
+      - if (error)
+        .alert.alert-error
+          a.close(data-dismiss="alert", href="#") &times;
+          | #{error} 
+      block content
+      include includes/foot
+    block script
+      script(src='/javascripts/jquery.min.js')
+      script(src='/javascripts/bootstrap.js')
