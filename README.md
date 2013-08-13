@@ -1,4 +1,4 @@
-micoblog
+microblog
 ========
 
 node.js microblog
